@@ -5,33 +5,35 @@ on:
     branches: [main]
   workflow_dispatch:
 
-permissions:
-  contents: read
-  packages: write
-
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
+    env:
+      REGISTRY: quay.io
+      IMAGE_NAME: paulcapestany/signet-landing
     steps:
       - uses: actions/checkout@v4
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
       - uses: docker/setup-buildx-action@v3
-      - name: Login to GHCR
+      - name: Login to Quay
         uses: docker/login-action@v3
         with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          registry: ${{ env.REGISTRY }}
+          username: ${{ secrets.QUAY_USERNAME }}
+          password: ${{ secrets.QUAY_PASSWORD }}
+      - id: version
+        name: Read app version
+        run: echo "version=$(node -p \"require('./package.json').version\")" >> "$GITHUB_OUTPUT"
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
           context: .
           push: true
+          platforms: linux/amd64,linux/arm64
+          provenance: false
           tags: |
-            ghcr.io/signeting/signet-landing:0.1.0
-            ghcr.io/signeting/signet-landing:latest
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ steps.version.outputs.version }}
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
           labels: |
             org.opencontainers.image.source=${{ github.repository }}
-      - name: Make package public
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh api --method PATCH /orgs/${{ github.repository_owner }}/packages/container/signet-landing/visibility -f visibility=public

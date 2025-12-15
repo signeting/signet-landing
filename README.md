@@ -37,8 +37,9 @@ Runs Vite dev server (default http://localhost:3000/) with hot reload.
 ## Container image
 A multi-stage Dockerfile is included to build and serve the static site with unprivileged nginx (port 8080):
 ```bash
-docker build -t ghcr.io/signeting/signet-landing:latest .
+docker buildx build --platform linux/amd64,linux/arm64 -t quay.io/paulcapestany/signet-landing:dev .
 ```
+CI builds and pushes multi-arch images to `quay.io/paulcapestany/signet-landing` on each push to `main`.
 
 ## Repo status
 - Origin: extracted from the `signet-trailer/` folder in github.com/bitiq-io/gitops.
