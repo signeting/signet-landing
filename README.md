@@ -34,6 +34,12 @@ Runs Vite dev server (default http://localhost:3000/) with hot reload.
   ```
 - Optional: cache-bust static assets under `/assets/` with long-lived headers.
 
+## Container image
+A multi-stage Dockerfile is included to build and serve the static site with unprivileged nginx (port 8080):
+```bash
+docker build -t ghcr.io/signeting/signet-landing:latest .
+```
+
 ## Repo status
 - Origin: extracted from the `signet-trailer/` folder in github.com/bitiq-io/gitops.
 - Source of truth for the landing UI lives here; GitOps repos consume the built artifact/image.
