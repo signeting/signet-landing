@@ -421,7 +421,7 @@ export default function App() {
       <section id="what-signet-does" className="py-32 px-6 bg-black text-white">
         <div className="max-w-5xl mx-auto">
           <h2 style={{ fontFamily: 'Urbanist, sans-serif', fontWeight: '700', fontSize: '48px' }} className="text-white mb-3">
-            <span style={{ fontFamily: 'Urbanist, sans-serif', fontWeight: '700', letterSpacing: '-0.025em' }}>Signet</span> Is An App That Highlights What Matters
+            <span style={{ fontFamily: 'Urbanist, sans-serif', fontWeight: '700', letterSpacing: '-0.025em' }}>Signet</span> Highlights What Matters Most
           </h2>
           <p style={{ fontFamily: 'Inter, sans-serif', fontWeight: '400', fontSize: '20px' }} className="text-gray-400 mb-12">
             We're using a combination of AI and human judgement to help separate signal from noise
