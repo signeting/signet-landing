@@ -232,10 +232,10 @@ export default function App() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: speed(3.2), duration: speed(1) }}
-                className="text-black inline-block relative text-center"
-                style={{ fontFamily: 'Urbanist, sans-serif !important', fontSize: 'clamp(1.1rem, 2.5vw, 1.75rem)', lineHeight: '1.4' }}
+                className="text-black relative inline-flex text-center"
+                style={{ fontFamily: 'Urbanist, sans-serif !important', fontSize: 'clamp(1.1rem, 2.5vw, 1.75rem)', lineHeight: '1.4', padding: '0.35em 0.6em' }}
               >
-                <span className="relative z-10 px-2 py-1">
+                <span className="relative z-10">
                   The internet has a credibility crisis
                   <br className="sm:hidden" />
                   and polarization problem
@@ -244,7 +244,7 @@ export default function App() {
                   initial={{ scaleX: 0 }}
                   animate={{ scaleX: 1 }}
                   transition={{ delay: speed(4.2), duration: speed(0.6), ease: "easeOut" }}
-                  className="absolute inset-0"
+                  className="absolute inset-0 rounded-sm"
                   style={{ transformOrigin: 'left', zIndex: 0, backgroundColor: 'rgba(255, 255, 0, 1)' }}
                 />
               </motion.p>
@@ -253,10 +253,10 @@ export default function App() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: speed(3.2), duration: speed(1) }}
-                className="text-black inline-block relative text-center"
-                style={{ fontFamily: 'Urbanist, sans-serif !important', fontSize: 'clamp(1.1rem, 2.5vw, 1.75rem)', lineHeight: '1.4' }}
+                className="text-black relative inline-flex text-center"
+                style={{ fontFamily: 'Urbanist, sans-serif !important', fontSize: 'clamp(1.1rem, 2.5vw, 1.75rem)', lineHeight: '1.4', padding: '0.35em 0.6em' }}
               >
-                <span className="relative z-10 px-2 py-1">
+                <span className="relative z-10">
                   The internet has a credibility crisis
                   <br className="sm:hidden" />
                   and polarization problem
@@ -265,7 +265,7 @@ export default function App() {
                   initial={{ scaleX: 0 }}
                   animate={{ scaleX: 1 }}
                   transition={{ delay: speed(4.2), duration: speed(0.6), ease: "easeOut" }}
-                  className="absolute inset-0"
+                  className="absolute inset-0 rounded-sm"
                   style={{ transformOrigin: 'left', zIndex: 0, backgroundColor: 'rgba(255, 255, 0, 1)' }}
                 />
               </motion.p>
@@ -277,10 +277,10 @@ export default function App() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: speed(5.2), duration: speed(1) }}
-                  className="text-black inline-block relative"
-                  style={{ fontFamily: 'Urbanist, sans-serif', fontSize: 'clamp(1.3rem, 3vw, 2.25rem)', fontWeight: '700', lineHeight: '1.3' }}
+                  className="text-black relative inline-flex"
+                  style={{ fontFamily: 'Urbanist, sans-serif', fontSize: 'clamp(1.3rem, 3vw, 2.25rem)', fontWeight: '700', lineHeight: '1.3', padding: '0.35em 0.6em' }}
                 >
-                  <span className="relative z-10 px-2 py-1">
+                  <span className="relative z-10">
                     <span style={{ fontFamily: 'Urbanist, sans-serif', fontWeight: '700' }}>Signet</span> helps you see<br className="md:hidden" />
                     {' '}what matters and why
                   </span>
@@ -288,7 +288,7 @@ export default function App() {
                     initial={{ scaleX: 0 }}
                     animate={{ scaleX: 1 }}
                     transition={{ delay: speed(6.2), duration: speed(0.6), ease: "easeOut" }}
-                    className="absolute inset-0"
+                    className="absolute inset-0 rounded-sm"
                     style={{ transformOrigin: 'left', zIndex: 0, backgroundColor: 'rgba(168, 85, 247, 1)' }}
                   />
                 </motion.p>
@@ -297,10 +297,10 @@ export default function App() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: speed(5.2), duration: speed(1) }}
-                  className="text-black inline-block relative"
-                  style={{ fontFamily: 'Urbanist, sans-serif', fontSize: 'clamp(1.3rem, 3vw, 2.25rem)', fontWeight: '700', lineHeight: '1.3' }}
+                  className="text-black relative inline-flex"
+                  style={{ fontFamily: 'Urbanist, sans-serif', fontSize: 'clamp(1.3rem, 3vw, 2.25rem)', fontWeight: '700', lineHeight: '1.3', padding: '0.35em 0.6em' }}
                 >
-                  <span className="relative z-10 px-2 py-1">
+                  <span className="relative z-10">
                     <span style={{ fontFamily: 'Urbanist, sans-serif', fontWeight: '700' }}>Signet</span> helps you see<br className="md:hidden" />
                     {' '}what matters and why
                   </span>
@@ -308,7 +308,7 @@ export default function App() {
                     initial={{ scaleX: 0 }}
                     animate={{ scaleX: 1 }}
                     transition={{ delay: speed(6.2), duration: speed(0.6), ease: "easeOut" }}
-                    className="absolute inset-0"
+                    className="absolute inset-0 rounded-sm"
                     style={{ transformOrigin: 'left', zIndex: 0, backgroundColor: 'rgba(168, 85, 247, 1)' }}
                   />
                 </motion.p>
@@ -325,36 +325,38 @@ export default function App() {
                     duration: speed(1), 
                     ease: [0.22, 1, 0.36, 1]
                   }}
-                  className="text-black inline-block relative"
+                  className="text-black relative inline-flex"
                   style={{ 
                     fontFamily: 'Urbanist, sans-serif',
                     fontSize: 'clamp(1.2rem, 2.8vw, 2rem)', 
                     fontWeight: '700',
                     fontStyle: 'italic',
-                    letterSpacing: '0.02em'
+                    letterSpacing: '0.02em',
+                    padding: '0.3em 0.55em'
                   }}
                 >
-                  <span className="relative z-10 px-2 py-1">With receipts</span>
+                  <span className="relative z-10">With receipts</span>
                   <motion.span
                     initial={{ scaleX: 0 }}
                     animate={{ scaleX: 1 }}
                     transition={{ delay: speed(8.2), duration: speed(0.6), ease: "easeOut" }}
-                    className="absolute inset-0"
+                    className="absolute inset-0 rounded-sm"
                     style={{ transformOrigin: 'left', zIndex: 0, backgroundColor: 'rgba(168, 85, 247, 1)' }}
                   />
                 </motion.p>
               ) : (
                 <p
-                  className="text-black inline-block relative"
+                  className="text-black relative inline-flex"
                   style={{ 
                     fontFamily: 'Urbanist, sans-serif',
                     fontSize: 'clamp(1.2rem, 2.8vw, 2rem)', 
                     fontWeight: '700',
                     fontStyle: 'italic',
-                    letterSpacing: '0.02em'
+                    letterSpacing: '0.02em',
+                    padding: '0.3em 0.55em'
                   }}
                 >
-                  <span className="relative z-10 px-2 py-1">
+                  <span className="relative z-10">
                     {"With receipts".split("").map((char, index) => (
                       <motion.span
                         key={index}
@@ -370,7 +372,7 @@ export default function App() {
                     initial={{ scaleX: 0 }}
                     animate={{ scaleX: 1 }}
                     transition={{ delay: speed(8.35), duration: speed(0.6), ease: "easeOut" }}
-                    className="absolute inset-0"
+                    className="absolute inset-0 rounded-sm"
                     style={{ transformOrigin: 'left', zIndex: 0, backgroundColor: 'rgba(168, 85, 247, 1)' }}
                   />
                 </p>
