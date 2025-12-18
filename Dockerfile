@@ -1,12 +1,12 @@
 # Multi-stage build: compile static assets, then serve via unprivileged nginx
-FROM node:20-alpine AS build
+FROM docker.io/library/node:20-alpine AS build
 WORKDIR /app
 COPY package*.json ./
 RUN npm ci
 COPY . .
 RUN npm run build
 
-FROM nginxinc/nginx-unprivileged:1.27-alpine
+FROM docker.io/nginxinc/nginx-unprivileged:1.27-alpine
 COPY docker/nginx.conf /etc/nginx/nginx.conf
 COPY --from=build /app/dist /usr/share/nginx/html
 EXPOSE 8080
