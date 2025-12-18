@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 import { useState, useEffect } from 'react';
 import DemoThread from './components/DemoThread';
 
-const SPEED_MULTIPLIER = 0.5;
+const SPEED_MULTIPLIER = 0.45;
 const speed = (value: number) => value * SPEED_MULTIPLIER;
 
 export default function App() {
