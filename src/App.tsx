@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 import { useState, useEffect } from 'react';
 import DemoThread from './components/DemoThread';
 
-const SPEED_MULTIPLIER = 0.2;
+const SPEED_MULTIPLIER = 0.3;
 const speed = (value: number) => value * SPEED_MULTIPLIER;
 
 export default function App() {
@@ -706,7 +706,7 @@ export default function App() {
               },
               {
                 q: "How do I get early access?",
-                a: "Email info@signet.ing with a sentence on what you want to use Signet for. We prioritize people who already curate or moderate communities and will reply with next steps."
+                a: "Email info@signet.ing with a sentence on what interests you about Signet."
               },
               {
                 q: "What exactly gets highlighted?",
