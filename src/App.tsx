@@ -705,6 +705,10 @@ export default function App() {
                 a: "Every decision—health, money, careers—could be influenced by online discussions where quality is essentially invisible. We make the valuable stuff you're missing actually visible."
               },
               {
+                q: "How do I get early access?",
+                a: "Email info@signet.ing with a sentence on what you want to use Signet for. We prioritize people who already curate or moderate communities and will reply with next steps."
+              },
+              {
                 q: "What exactly gets highlighted?",
                 a: "It depends on the context, but about 15% yellow (convergent valuable), and 10% purple (divergent valuable). The rest stays unhighlighted. By default we hide obvious spam."
               }
